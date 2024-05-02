@@ -58,3 +58,36 @@ addNetBathBtn.addEventListener("click", () => {
     const netBathValue = parseFloat(netBathInput.value);
     // Update water consumption calculations and UI elements based on netBathValue
 });
+
+addNetBathBtn.addEventListener("click", () => {
+    console.log("Add Net Bath button clicked");
+});
+
+addNetBathBtn.addEventListener("click", () => {
+    const netBathValue = parseFloat(netBathInput.value);
+
+    // Validate the input
+    if (isNaN(netBathValue) || netBathValue < 0 || netBathValue > 2) {
+        alert("Please enter a valid number between 0 and 2");
+        return;
+    }
+
+    // Calculate the new remained liters
+    const currentRemained = parseFloat(liters.innerText);
+    const newRemained = currentRemained - netBathValue;
+
+    if (newRemained < 0) {
+        alert("Too much water added! It exceeds the total capacity.");
+        return;
+    }
+
+    // Update the display values
+    liters.innerText = `${newRemained.toFixed(2)}L`;
+
+    // Update the percentage height based on the new level
+    const totalCapacity = 2; // Total capacity in liters
+    const newPercentage = (1 - newRemained / totalCapacity) * 330;
+    percentage.style.height = `${newPercentage}px`;
+    percentage.innerText = `${((1 - newRemained / totalCapacity) * 100).toFixed(2)}%`;
+});
+
