@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Water AI Assistance</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://www.aavawater.com/blog" target="_blank">Water Blogs</a></li>
+            <li><a href="https://aistudio.google.com/app/prompts/new_chat" target="_blank">Custom AI</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <h1>Water AI Assistance</h1>
+    <h3>Goal: 2 Liters</h3>
+
+    <div class="cup">
+        <div class="remained" id="remained">
+            <span id="liters"></span>
+            <small>Remained</small>
+        </div>
+
+        <div class="percentage" id="percentage"></div>
+    </div>
+
+    <p class="text">Select how many glasses of water that you have drank</p>
+
+    <div class="cups">
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+    </div>
+
+    <div class="custom-water" id="custom-ai">
+        <label for="netBathInput">Net Bath (L):</label>
+        <input type="number" id="netBathInput" min="0" max="2">
+        <button id="addNetBath">Add</button>
+        <br>
+        <br>
+    </div>
+
+    <!-- Custom AI Section -->
+    <div class="custom-ai" id="custom-ai">
+        <h2>Water AI Assistant Prompt <h6>(Please Copy the below prompt and past on the "CUSTOM AI" which is prsent in
+                the Navbar)</h6>
+        </h2>
+        <div class="ai-prompt">
+            <h3>"Water AI Assistant Prompt:</h3>
+            <p>
+                Hello! I'm Water AI Assistant, here to help you stay hydrated and healthy.
+            </p>
+            <h4>Greeting:</h4>
+            <p>
+                User: Hi/Hello/Greetings<br>
+                Water AI Assistant: Hi there! To personalize your hydration plan, may I ask a few questions?
+            </p>
+            <h4>Personal Information Gathering:</h4>
+            <p>
+                Water AI Assistant: How old are you? (User provides age)<br>
+                Water AI Assistant: What is your gender? (Male/Female/Other) (User provides gender)<br>
+                Water AI Assistant: What is your occupation? (e.g., Office worker, Athlete, etc.) (User provides
+                occupation)<br>
+                Water AI Assistant: What city do you live in? (e.g., Mumbai, New York, etc.) (User provides city)
+            </p>
+            <h4>Personalized Hydration Plan:</h4>
+            <p>
+                Based on your information, I recommend a daily water intake of approximately (calculated water intake
+                based on user profile).
+            </p>
+            <h4>Additional Resources:</h4>
+            <p>
+                For further information on hydration and healthy habits, check out these resources:
+            </p>
+            <ul>
+                <li>Blog 1: (Link to blog on water intake benefits)</li>
+                <li>Blog 2: (Link to blog on creating a water drinking habit)</li>
+            </ul>
+            <h4>Conclusion:</h4>
+            <p>
+                Do you have any other questions about hydration or water intake?
+            </p>
+            <h4>Farewell:</h4>
+            <p>
+                User: Thank you so much!<br>
+                Water AI Assistant: You're welcome! Remember, staying hydrated is key to good health."
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Contact us at <a href="mailto:CloudComputingProject@gmail.com">CloudComputingProject@gmail.com</a> | +91
+            4545454545</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
